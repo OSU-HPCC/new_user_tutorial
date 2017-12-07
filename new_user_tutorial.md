@@ -76,7 +76,7 @@ It is important to change from the temporary password you recieve when you open 
 > Passwords should be at least eight characters long and include numbers, letters, and special characters.
 
 # Linux Commands
-Below are Linux commands that are useful on Cowboy.
+Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 
 **Linux Commands**
 
@@ -95,4 +95,19 @@ Below are Linux commands that are useful on Cowboy.
 | `man` | Manual | Allows user to look up entries in the manual. |
 | `exit` | Exit | Quits the terminal session. |
 
+**Terminal Shorthand**
 
+| Shorthand | Terminal's Interpretation |
+| --------- | ------------------------- |
+| `..` | One directory up from the current directory. |
+| `.` | The current directory. |
+| `~` | The user's home directory. |
+
+**Keyboard Shortcuts**
+
+| Key Combination | Action |
+| --------------- | ------ |
+| `Tab` | Automatically completes partially typed commands or filenames. |
+| The up arrow | Cycles through previously entered commands. |
+| `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
+| `Ctrl`+`c` | Stops a running command. |
