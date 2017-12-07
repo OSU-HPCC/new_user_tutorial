@@ -125,3 +125,23 @@ Users also have access to the `/opt` directory. The `/opt` folder contains softw
 > If Cowboy does not software that you need, you can request that we install it for you. Please send us an [email](mailto:hpcc@okstate.edu "HPCC Email").
 
 ![Cowboy File System](img/cowboy_file_system.png "Cowboy's File System")
+
+# File Transfers
+There are several options for moving files between your computer and Cowboy. Globus is a file transfer application that handles large data transfers. For smaller data
+transfers, you can use one of the GUI options below. If you prefer a command-line interface, instructions have been included as well.
+
+## Globus
+Globus is an online service which facilitates fault tolerant, large data transfers. Cowboy is a Globus endpoint with the name `okstate#cowboy1`.
+
+* Set up your computer as a Globus endpoint by downloading the [Globus Personal Client](https://www.globus.org/globus-connect-personal "Globus Personal Client").
+* [Create an account](https://www.globusid.org/create "New Globus Account") with online.
+* Verify the account and log into Globus.
+* Find the *Manage Data* drop-down list and click "Transfer Files".
+* Your screen should look similar to this one:
+
+![Globus](img/globus.png "Globus Screen")
+
+* The Cowboy endpoint is `okstate#cowboy1`.
+* Once both endpoints are entered correctly, click one of the arrows to start the file transfer.
+
+For more information, visit the [Globus website](https://www.globus.org/ "Globus Website"). The Globus website has several [quick start guides](https://support.globus.org/forums/20538617 "Globus Quick Start Guides").
