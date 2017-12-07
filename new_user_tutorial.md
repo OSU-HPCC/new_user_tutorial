@@ -26,6 +26,7 @@ Most Windows operating systems do not have a terminal application preinstalled. 
 
 ## Linux
 Linux operating systems have a terminal application preinstalled. You can launch a terminal from your computer’s application menu.
+
 - In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 > If your username is "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
 - Next, enter your password, followed by the `Enter` key. Passwords are case sensitive.
@@ -34,6 +35,7 @@ Linux operating systems have a terminal application preinstalled. You can launch
 
 ## Mac
 Macintosh operating systems have a preinstalled terminal application.
+
 - Open your *Finder* (hard drive) window.
 - Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
 - In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
@@ -62,5 +64,35 @@ Your mouse has no function within the terminal. Apart from copy and paste comman
 | Mac Terminal | The key combination `Command`+`v` will paste. |
 | Linux's xterm | Middle-clicking is equivalent to paste. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`v` will paste. |
+
+# Changing Your Password
+It is important to change from the temporary password you recieve when you open an account, to a password that you set. Change your password using the `passwd` command.
+> Be on your guard against phishing emails. No HPCC employee will ever ask you for your password.
+
+- Once you are logged in, type `passwd`.
+- Enter your old password, then your new password twice.
+> Nothing will display while you type your password. This is a security feature.
+- Please use a **strong** password.
+> Passwords should be at least eight characters long and include numbers, letters, and special characters.
+
+# Linux Commands
+Below are Linux commands that are useful on Cowboy.
+
+**Linux Commands**
+
+| Command | Name | Purpose |
+| ------- | ---- | ------- |
+| `pwd` | Print Working Directory | Displays your current location. |
+| `ls` | List | List all the files and subdirectories within a directory. |
+| `cd` | Change Directory | Moves the user to a different directory. |
+| `cp` | Copy | Makes a copy of a file. |
+| `mv` | Move | Moves a file to a new location. |
+| `rm` | Remove | *Permanantly* deletes a file. |
+| `grep` | Grep | Searches in a file's contents. |
+| `nano -w` | Nano | Terminal based text editor. |
+| `diff` | Diff | Compares the differences between two files. |
+| `tar` | Tar | Creates file archives. |
+| `man` | Manual | Allows user to look up entries in the manual. |
+| `exit` | Exit | Quits the terminal session. |
 
 
