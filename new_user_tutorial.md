@@ -106,3 +106,22 @@ table: Terminal Shorthand
 | `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
 | `Ctrl`+`c` | Stops a running command. |
 table: Keyboard Shortcuts
+
+The OSU HPCC website maintains a [page](https://hpcc.okstate.edu/content/hpc-education-resources) of Linux tutorials.
+
+# File System
+Each user will have access to two directories: `/home` and `/scratch`. When you log in, your working directory is `/home/username`, where `username` is your username. `/home/username` has a quota of 25GB. Your source code and executables should be stored here.
+
+> `/home/username` is **not backed up**.
+
+To check your current usage, type `du –sh`.
+
+`/scratch/username` is for large files and large collections of files.
+
+> `/scratch/username` is **not backed up**. If you need archival storage, please contact [Dana Brunson](mailto:dana.brunson@okstate.edu "Dana Brunson").
+
+Users also have access to the `/opt` directory. The `/opt` folder contains software needed by users.
+
+> If Cowboy does not software that you need, you can request that we install it for you. Please send us an [email](mailto:hpcc@okstate.edu "HPCC Email").
+
+![Cowboy File System](img/cowboy_file_system.png "Cowboy's File System")
