@@ -45,7 +45,7 @@ Macintosh operating systems have a preinstalled terminal application.
 ### Using your mouse
 Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard in a terminal.
 
-**Copy**
+**Copy Commands**
 
 | **System** | **Action** |
 | ---------- | ---------- |
@@ -53,5 +53,14 @@ Your mouse has no function within the terminal. Apart from copy and paste comman
 | Mac Terminal | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
 | Linux's xterm | Highlighting with a mouse is equivalent to copy. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy. |
+
+**Paste Commands**
+
+| **System** | **Action** |
+| ---------- | ---------- |
+| Putty | Right-clicking is equivalent to paste. |
+| Mac Terminal | The key combination `Command`+`v` will paste. |
+| Linux's xterm | Middle-clicking is equivalent to paste. |
+| Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`v` will paste. |
 
 
