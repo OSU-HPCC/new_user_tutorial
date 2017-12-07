@@ -47,16 +47,13 @@ Macintosh operating systems have a preinstalled terminal application.
 ### Using your mouse
 Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard in a terminal.
 
-**Copy Commands**
-
 | **System** | **Action** |
 | ---------- | ---------- |
 | Putty | Highlighting with a mouse is equivalent to copy. |
 | Mac Terminal | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
 | Linux's xterm | Highlighting with a mouse is equivalent to copy. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy. |
-
-**Paste Commands**
+table: Copy Commands
 
 | **System** | **Action** |
 | ---------- | ---------- |
@@ -64,6 +61,7 @@ Your mouse has no function within the terminal. Apart from copy and paste comman
 | Mac Terminal | The key combination `Command`+`v` will paste. |
 | Linux's xterm | Middle-clicking is equivalent to paste. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`v` will paste. |
+table: Paste Commands
 
 # Changing Your Password
 It is important to change from the temporary password you recieve when you open an account, to a password that you set. Change your password using the `passwd` command.
@@ -77,8 +75,6 @@ It is important to change from the temporary password you recieve when you open 
 
 # Linux Commands
 Below are Linux commands and terminal shortcuts that are useful on Cowboy.
-
-**Linux Commands**
 
 | Command | Name | Purpose |
 | ------- | ---- | ------- |
@@ -94,16 +90,14 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `tar` | Tar | Creates file archives. |
 | `man` | Manual | Allows user to look up entries in the manual. |
 | `exit` | Exit | Quits the terminal session. |
-
-**Terminal Shorthand**
+table: Linux Commands
 
 | Shorthand | Terminal's Interpretation |
 | --------- | ------------------------- |
 | `..` | One directory up from the current directory. |
 | `.` | The current directory. |
 | `~` | The user's home directory. |
-
-**Keyboard Shortcuts**
+table: Terminal Shorthand
 
 | Key Combination | Action |
 | --------------- | ------ |
@@ -111,3 +105,4 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | The up arrow | Cycles through previously entered commands. |
 | `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
 | `Ctrl`+`c` | Stops a running command. |
+table: Keyboard Shortcuts
