@@ -186,6 +186,20 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 ![Cyberduck Connected](img/cyberduck_connected.png "Cyberduck After Logging In")
 
-## Filezilla (Windows, Linux, and Mac)
+## FileZilla (Windows, Linux, and Mac)
 
-* Download Filezilla
+* Download FileZilla from their [website](https://filezilla-project.org/ "FileZilla Website").
+* Click the *Download FileZilla Client -  All platforms* icon.
+* After downloading and opening FileZilla, your window should look like the one below.
+
+![FileZilla](img/filezilla.png "FileZilla")
+
+* For *Host*, type `cowboy.hpc.okstate.edu`.
+> `cowboy.hpc.okstate.edu` should automatically change to `sftp://cowboy.hpc.okstate.edu`.
+* Enter your Cowboy username and password.
+* Change *Port* to `22`.
+* Click *Quickconnect*.
+* Your window should look like the image below.
+* You can drag and drop files in either direction.
+
+![FileZilla Connected](img/filezilla_connected.png "FileZilla After Logging In")
