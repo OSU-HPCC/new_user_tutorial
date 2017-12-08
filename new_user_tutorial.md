@@ -203,3 +203,23 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 * You can drag and drop files in either direction.
 
 ![FileZilla Connected](img/filezilla_connected.png "FileZilla After Logging In")
+
+## Command-line File Transfers (Linux and Mac)
+
+### Copy a file *from Cowboy* to your local machine
+
+* Open a terminal on your local machine.
+* Navigate to the directory where you want to place the file.
+* Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`
+> If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#linux-commands) for the current working directory.
+* Enter your Cowboy password.
+* You will see the filename and "100%" once the transfer is complete.
+
+### Copy a file from your local machine *to Cowboy*.
+
+* Open a terminal on your local machine.
+* Navigate to the directory where your file is located.
+* Type `scp localfilename yourusername@cowboy.hpc.okstate.edu:/directory_where_you_want_to_put_the_file/`.
+> If Pete wanted to put `examplefile.txt` in his `/data` folder in `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
+* Enter your Cowboy password.
+* You will see the filename and "100%" once the transfer is complete.
