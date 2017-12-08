@@ -403,3 +403,56 @@ Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's
 | express | 1 hour (1:00:00) | For short jobs, and debugging or testing scripts. Only contains two compute nodes. |
 | bigmem | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card. |
 | killable | 504 hours (504:00:00) | For long running jobs. HPCC administrators may stop jobs in this queue at any time. |
+
+## Processors Per Node
+Each compute node on Cowboy has 12 processors (cores) and 32 GB of RAM.
+
+### Applications that use a single node
+If your code only uses a single core, it is better to only one core:
+
+```bash
+#PBS -l nodes=1:ppn=1
+```
+
+If your code can use all 12 cores efficiently, request all 12 cores:
+```bash
+#PBS -l nodes=1:ppn=12
+```
+
+Here is an example script for a job that uses all 12 cores on a single node.
+
+```bash
+#!/bin/bash
+#PBS -q batch
+#PBS -l nodes=1:ppn=12
+#PBS -l walltime=24:00:00
+#PBS -j oe
+
+module load <software_module_name>
+cd $PBS_O_WORKDIR
+
+<put the commands to run your application here>
+```
+
+> Make sure to remove the enclosing brackets (`< >`) in the above example. Don't make the mistake of putting your module name and job commands inside of them.
+
+### Applications that use multiple nodes
+Here is an example submission script for a job that uses Message Passing Interface (MPI) to run on more than one node.
+
+```bash
+#!/bin/bash
+#PBS -q batch
+#PBS -l nodes=16:ppn=12
+#PBS -l walltime=24:00:00
+#PBS -j oe
+
+module load mvapich2-1.8/intel
+cd $PBS_O_WORKDIR
+
+NP=$(cat $PBS_NODEFILE | wc -l)
+mpirun -np ${NP} ./yourexecutable
+```
+
+# Contact Infromation
+**Email:** [hpcc@okstate.edu](mailto:hpcc@okstate.edu "HPCC Staff Email")
+**Website:** [hpcc.okstate.edu](https://hpcc.okstate.edu/ "OSU HPCC Website")
