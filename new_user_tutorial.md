@@ -1,51 +1,49 @@
 # Using a Terminal
-Most computer users are familiar with a graphical user interface (GUI). A GUI consists of visual icons and directories that are navigated using a mouse. Most high performance computing (HPC) systems use a command-line interface because a user can efficiently do many common HPC tasks.
+Most computer users are familiar with a graphical user interface (GUI). A GUI consists of visual icons and directories that are navigated using a mouse. Most high performance computing (HPC) systems use a command-line interface because it allows a user to efficiently do many common HPC tasks. While there is a steep learning curve associated with using a terminal, it has a set of features that allows researchers to automate tasks, saving time and money.
 
-While there is a steep learning curve associated with using a terminal, it has a set of features that allows researchers to automate tasks, saving time and money.
-
-# Logging into the Cluster
-In order to log into Cowboy, you will need to use a terminal with Secured Shell (SSH). After logging in, you will be on one of the cluster's *login nodes*. *Node* refers to a server or computer. Cowboy, OSU HPCC's cluster built in 2012, also includes 254 *compute nodes*. All these nodes are connected by a fast, private network. A *cluster* consists of these nodes, the network, and a file system.
+# Logging into Cowboy
+In order to log into Cowboy, you need to use a terminal with Secured Shell (SSH). After logging in, you will be on one of the cluster's *login nodes*. *Node* refers to a server or computer. Cowboy also includes 254 *compute nodes*. A private network connects the compute nodes together. A *cluster* consists of these nodes, the network, and a file system.
 
 ## Windows
-Most Windows operating systems do not already have a terminal application installed. Putty is a free, open-source terminal emulator that supports network SSH. Here are the instructions for using Putty:
+Most Windows operating systems do not already have a terminal application. Putty is a free, open-source terminal emulator that supports SSH.
 
-- First, download Putty from the [Putty website](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html "Putty").
-- Download the file "putty.exe," save it to your desktop, then run it.
+- Download Putty from the [Putty website](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html "Putty").
+- Choose the file "putty.exe," save it to your desktop, then run it.
 - A window will open that looks like the image below.
 
 ![Putty](img/putty.png "Putty Login Screen")
 
-- In the box labeled *Host Name*, enter: `cowboy.hpc.okstate.edu`.
-- Be sure the *Connection type* is "SSH," and the Port number is `22`.
-- In the *Saved Sessions* box, you can give a name to these settings, i.e. `Cowboy`, and click *Save*.
+- Enter `cowboy.hpc.okstate.edu` in *Host Name* text box.
+- Verify *Connection type* is "SSH," and Port number is `22`.
+- In *Saved Sessions*, you can name these settings, i.e. `Cowboy`, and click *Save*.
 - Next time you open Putty, you can double-click this saved session and it will open a login screen directly.
 - After saving your settings, click *Open*. Enter your Cowboy username and press the `Enter` key.
-- Next, enter your password, followed by the `Enter` key. Passwords are case sensitive.
+- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 > Nothing will display while you type your password. This is a security feature.
-- To terminate your session on Cowboy, type `exit` or `logout`, followed by the `Enter` key.
+- To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Linux
-Linux operating systems already have a terminal application installed. You can launch a terminal from your computer’s application menu.
+Linux operating systems already have a terminal application. You can launch a terminal from your computer’s application menu.
 
 - In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
-- Next, enter your password, followed by the `Enter` key. Passwords are case sensitive.
+- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 > Nothing will display while you type your password. This is a security feature.
-- To terminate your session on Cowboy, type `exit` or `logout`, followed by the `Enter` key.
+- To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Mac
-Macintosh operating systems have a installed terminal application.
+Macintosh operating systems already have a terminal application.
 
 - Open your *Finder* (hard drive) window.
 - Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
 - In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
-- Next, enter your password, followed by the `Enter` key. Passwords are case sensitive.
+- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 > Nothing will display while you type your password. This is a security feature.
-- To terminate your session on Cowboy, type `exit` or `logout`, followed by the `Enter` key.
+- To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ### Using your mouse
-Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard in a terminal.
+Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard.
 
 | **System** | **Action** |
 | ---------- | ---------- |
@@ -64,10 +62,11 @@ table: Copy Commands
 table: Paste Commands
 
 # Changing Your Password
-It is important to change from the temporary password you receive when you open an account, to a password that you set. Change your password using the `passwd` command.
-> Be on your guard against phishing emails. No HPCC employee will ever ask you for your password.
+It is important to change your password when you log in the first time. Change your password using the `passwd` command.
 
-- Once you are logged in, type `passwd`.
+> Be on your guard against phishing emails. HPCC employees will never ask you for your password.
+
+- After logging in, type `passwd`.
 - Enter your old password, then your new password twice.
 > Nothing will display while you type your password. This is a security feature.
 - Please use a **strong** password.
@@ -81,16 +80,16 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `pwd` | Print Working Directory | Displays your current location. |
 | `ls` | List | List all the files and directories within a directory. |
 | `cd` | Change Directory | Moves the user to a different directory. |
-| `cp` | Copy | Makes a copy of a file. |
-| `mv` | Move | Moves a file to a new location. |
+| `cp` | Copy | Copies a file. |
+| `mv` | Move | Moves a file (also renames a file). |
 | `rm` | Remove | *Permanantly* deletes a file. |
-| `grep` | Grep | Searches in a file's contents. |
-| `nano -w` | Nano | Terminal based text editor. |
-| `diff` | Diff | Compares the differences between two files. |
+| `grep` | Grep | Searches a file's contents. |
+| `nano -w` | Nano | Is a text editor. |
+| `diff` | Diff | Compares differences between files. |
 | `tar` | Tar | Creates file archives. |
-| `man` | Manual | Allows user to look up entries in the manual. |
-| `exit` | Exit | Quits the terminal session. |
-| `|` | Pipe | The pipe character is placed between two commands. It takes the output from the first command and turns it into input for the second command. |
+| `man` | Manual | Allows users to look up manual entries. |
+| `exit` | Exit | Ends the session. |
+| `\|` | Pipe | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
 table: Linux Commands
 
 | Shorthand | Terminal's Interpretation |
@@ -102,8 +101,8 @@ table: Terminal Shorthand
 
 | Key Combination | Action |
 | --------------- | ------ |
-| `Tab` | Automatically completes partially typed commands or file names. |
-| The up arrow | Cycles through previously entered commands. |
+| `Tab` | Completes partially typed commands or file names. |
+| The up arrow | Cycles through previous commands. |
 | `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
 | `Ctrl`+`c` | Stops a running command. |
 table: Keyboard Shortcuts
@@ -111,68 +110,65 @@ table: Keyboard Shortcuts
 The OSU HPCC website maintains a [page](https://hpcc.okstate.edu/content/hpc-education-resources) of Linux tutorials.
 
 # File System
-Each user will have access to two directories: `/home` and `/scratch`. When you log in, your working directory is `/home/username`, where `username` is your username. `/home/username` has a quota of 25GB. Your source code and executable files should be stored here.
+Each user has access to two directories: `/home` and `/scratch`. When you log in, your working directory is `/home/username`, where `username` is your username. `/home/username` has a quota of 25GB. To check your current usage, type `du -sh`. You should store your source code and executable files here.
 
-> `/home/username` is **not backed up**.
+> OSU HPCC staff **does not** back up your home folder.
 
-To check your current usage, type `du –sh`.
+Use `/scratch/username` for large files and large file collections.
 
-`/scratch/username` is for large files and large collections of files.
+> OSU HPCC staff **does not** back up your scratch folder. If you need archival storage, please contact [Dana Brunson](mailto:dana.brunson@okstate.edu "Dana Brunson").
 
-> `/scratch/username` is **not backed up**. If you need archival storage, please contact [Dana Brunson](mailto:dana.brunson@okstate.edu "Dana Brunson").
+Users also have access to the `/opt` directory. `/opt` contains additional software.
 
-Users also have access to the `/opt` directory. The `/opt` folder contains software needed by users.
-
-> If Cowboy does not software that you need, you can request that we install it for you. Please send us an [email](mailto:hpcc@okstate.edu "HPCC Email").
+> If Cowboy does not have software you need, send us an [email](mailto:hpcc@okstate.edu "HPCC Email") and request a software install.
 
 ![Cowboy File System](img/cowboy_file_system.png "Cowboy's File System")
 
 # File Transfers
-There are several options for moving files between your computer and Cowboy. Globus is a file transfer application that handles large data transfers. For smaller data
-transfers, you can use one of the GUI options below. If you prefer a command-line interface, instructions have been included as well.
+Several options exist for moving files between your computer and Cowboy. Globus is a file transfer application for large data transfers. Smaller data transfers can utilize one of the GUI options below. If you prefer a command-line interface, please see the last set of directions in this section.
 
 ## Globus
-Globus is an online service which facilitates fault tolerant, large data transfers. Cowboy is a Globus endpoint with the name `okstate#cowboy1`.
+Globus is an online service which facilitates fault tolerant, large data transfers.
 
 * Set up your computer as a Globus endpoint by downloading the [Globus Personal Client](https://www.globus.org/globus-connect-personal "Globus Personal Client").
-* [Create an account](https://www.globusid.org/create "New Globus Account") with online.
+* [Create an account](https://www.globusid.org/create "New Globus Account"). 
 * Verify the account and log into Globus.
 * Find the *Manage Data* drop-down list and click "Transfer Files".
-* Your screen should look similar to this one:
+* Your screen will look similar to this one:
 
 ![Globus](img/globus.png "Globus Screen")
 
-* The Cowboy endpoint is `okstate#cowboy1`.
-* Once both endpoints are entered correctly, click one of the arrows to start the file transfer.
+* The Cowboy "Endpoint" is `okstate#cowboy1`.
+* Once you have entered both endpoints, click one of the arrows to start the transfer.
 
-For more information, visit the [Globus website](https://www.globus.org/ "Globus Website"). The Globus website has several [quick start guides](https://support.globus.org/forums/20538617 "Globus Quick Start Guides").
+For more information, visit the [Globus website](https://www.globus.org/ "Globus Website").
 
 ## WinSCP (Windows)
 
-* Download the "Portable executables" from the [WinSCP Website](http://winscp.net/eng/download.php).
+* Download "Portable executables" from the [WinSCP Website](http://winscp.net/eng/download.php).
 * The download is a zip archive with the file *WinSCP.exe*. Place *WinSCP.exe* on your computer's desktop. This is the only file you need.
 * Double-click the WinSCP icon.
 * A window like the one below will open:
 
 ![WinSCP](img/winscp.png "WinSCP")
 
-* In the *Host name* box type `cowboy.hpc.okstate.edu`.
-* In the *User name* box enter your username
-> If you want to save the above information, click *Save* under the *User name* box. In the future, you can double-click on the session to log in.
+* In the *Host name* box, type `cowboy.hpc.okstate.edu`.
+* In the *User name* box, enter your username.
+> If you want to save the above information, click *Save*. In the future, you can double-click the session name directly to log in.
 * Click *Login*.
-* Once you are connected, you will see a window similar to the one below.
+* You will see a window similar to the one below once you have connected.
 
 ![WinSCP Connected](img/winscp_connected.png "WinSCP After Logging In")
 
-* The left side contains your files, and the right side has your home directory on Cowboy
+* The left side contains your files, and the right side has your Cowboy home directory.
 * You can drag and drop files in either direction.
 
 ## Cyberduck (Windows and Mac)
 
 * Download Cyberduck from their [website](https://cyberduck.io/ "Cyberduck Website")
 * Click the *Download* icon **below** the duck.
-> The *Start Download* icon on the right of the duck is an advertisement.
-* After downloading and opening Cyberduck, you should have a window that looks similar to this:
+> Warning! The *Start Download* icon on the right of the duck is an advertisement.
+* After downloading and opening Cyberduck, you should see a window similar to this:
 
 ![Cyberduck](img/cyberduck.png "Cyberduck")
 
@@ -182,8 +178,8 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 * Change the *Port* to `22`.
 * Enter your Cowboy username and password.
 * Click *Connect*.
-* Your Cyberduck window should now look like the picture below.
-* You can drag and drop files in both directions from this window.
+* Your Cyberduck window now looks like the picture below.
+* You can drag and drop files in both directions.
 
 ![Cyberduck Connected](img/cyberduck_connected.png "Cyberduck After Logging In")
 
@@ -191,7 +187,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 * Download FileZilla from their [website](https://filezilla-project.org/ "FileZilla Website").
 * Click the *Download FileZilla Client -  All platforms* icon.
-* After downloading and opening FileZilla, your window should look like the one below.
+* After downloading and opening FileZilla, your window looks like the following image:
 
 ![FileZilla](img/filezilla.png "FileZilla")
 
@@ -200,7 +196,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 * Enter your Cowboy username and password.
 * Change *Port* to `22`.
 * Click *Quickconnect*.
-* Your window should look like the image below.
+* Your window is now like the picture below.
 * You can drag and drop files in either direction.
 
 ![FileZilla Connected](img/filezilla_connected.png "FileZilla After Logging In")
@@ -211,22 +207,22 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 * Open a terminal on your local machine.
 * Navigate to the directory where you want to place the file.
-* Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`
+* Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`.
 > If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#linux-commands) for the current working directory.
 * Enter your Cowboy password.
-* You will see the file name and "100%" once the transfer is complete.
+* You will see the file name and "100%" once the transfer completes.
 
-### Copy a file from your local machine *to Cowboy*.
+### Copy a file from your local machine *to Cowboy*
 
 * Open a terminal on your local machine.
 * Navigate to the directory where your file is located.
 * Type `scp localfilename yourusername@cowboy.hpc.okstate.edu:/directory_where_you_want_to_put_the_file/`.
-> If Pete wanted to put `examplefile.txt` in his `/data` folder in `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
+> If Pete wanted to put `examplefile.txt` in his `/data` folder on `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
 * Enter your Cowboy password.
-* You will see the file name and "100%" once the transfer is complete.
+* You will see the file name and "100%" once the transfer completes.
 
 # Scheduler
-When you log into Cowboy, you are located on one of Cowboy’s login nodes. You can edit files here, but you must use the scheduler to run your job. The scheduler takes information from you, finds the best compute node(s) to use, and runs your job there.
+When you log into Cowboy, you are located on one of Cowboy’s login nodes. You can edit files here, but you must use the scheduler to run your job. The scheduler takes information from you, finds the best compute node(s) to use, and runs your job.
 
 ![Cowboy System](img/cowboy_log_in.png "Cowboy's Structure")
 
@@ -235,15 +231,15 @@ The most effective way to use Cowboy is as follows:
 * Log in.
 * Save information about your job in a submission script.
 * Submit your submission script to the scheduler.
-* Log out and wait for your job to complete.
-> You can set up your submission script so that the scheduler sends you an email once your job has [finished](#nano).
+* Log out and wait for your job to finish.
+> You can set up your submission script so that the scheduler sends you an email once your job is [finished](#nano).
 
-The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference the list of [Linux commands](#linux-commands).
+The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference this guides's list of [Linux commands](#linux-commands).
 
 # Submission Scripts
-Submission scripts give information about our job to the scheduler. Remember to use your username in place of `pete` in the following examples.
+Submission scripts give information about your job to the scheduler. Remember to use your username in place of `pete` in the following examples.
 
-* From the login node, change to the scratch directory and create a new directory called `sample`.
+* Change to the scratch directory and create a new directory called `sample`.
 
 ```bash
 $ cd /scratch/pete
@@ -279,25 +275,25 @@ module load examples
 helloworld
 ```
 
-Any line that begins with `#` is a comment. It is for your notes and is ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. For more information about each of the lines in the submission script, see the table below.
+Lines begining with `#` are comments. They serve as your notes, but are ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. See the table below for more information.
 
 | Line | Meaning |
 | ---- | ------- |
-| `#PBS -q express` | Determines what queue your job will wait in before it runs. |
-| `#PBS -l nodes=1:ppn=1` | Determine how many nodes and processors per node (ppn) your job will need. |
+| `#PBS -q express` | Determines what queue your job will wait in before it begins. |
+| `#PBS -l nodes=1:ppn=1` | Determine how many nodes, and processors per node (ppn), your job will need. |
 | `#PBS -l wlltime=10:00` | Determines your job's time limit. |
-| `#PBS -j oe` | Please make sure all your submission scripts include this line. It will help HPCC staff assist you in case your job has an error. |
+| `#PBS -j oe` | Please make sure all your submission scripts include this line. It will help HPCC staff assist you if your job has an error. |
 | `cd $PBS_O_WORKDIR` | Tells the system where your job is located. Please make sure all your submission scripts include this line. |
 | `module load` | Loads any needed software to run your job. |
-| `helloworld` | The command to start your job. This command will be change depending on your job. |
+| `helloworld` | The command to start your job. This command will change depending on your job. |
 table: Scheduler Commands
 
 > Please try to accurately predict how long your job will take. If the wall time is too long, it may delay your job's start time. If your job is taking longer than you expected, please email [HPCC staff](mailto:hpcc@okstate.edu) to request a wall time extension.
 
-If you have any questions about job queues, nodes an processors or wall time limits, please email [HPCC staff](mailto:hpcc@okstate.edu).
+If you have questions about job queues, nodes and processors, or wall time limits, please email [HPCC staff](mailto:hpcc@okstate.edu).
 
 # Submitting Jobs
-Please submit all jobs to the scheduler. Your job will run as soon as resources are available. Since Cowboy is a shared resource, the scheduler determines when to begin your job. **Do not** run a job on a login node.
+Please submit all jobs to the scheduler. Your job will begin as resources become available. Since Cowboy is a shared resource, the scheduler determines when to begin your job. **Do not** run a job on a login node.
 
 * Continue the exercise by using `qsub` to submit your job.
 
@@ -308,7 +304,7 @@ $ qsub helloworld.pbs
 
 This command submits the job to the scheduler and returns a job ID number.
 
-* To see all the running jobs, enter the command `showq`.
+* To see all running jobs, enter the command `showq`.
 
 * To view only your jobs, add `grep` and `|` to your command.
 
@@ -326,7 +322,7 @@ Hello pete I am running on node n245.cluster
 
 * You can stop a running job by using `qdel` and the job ID number: `qdel 414`.
 
-* Once your job finishes, you can view the output by looking at the file created by the scheduler. This file be named by the convention `jobname.ojobidnumber`.
+* Once your job finishes, view the output by looking at the scheduler's output file. It is the file with the naming convention `jobname.ojobidnumber`.
 
 ```bash
 $ ls
@@ -338,9 +334,9 @@ successfully finished!
 ```
 
 # Nano
-Nano is a text editor for the terminal. You can use Nano to edit the example script to fit your job’s needs.
+Nano is a terminal text editor. You can use Nano to edit the example script so it fits your job’s needs.
 
-* Add a command telling Cowboy to email you once the job has completed. Edit the submission script using `nano`.
+* Use `nano` to add a command telling Cowboy to email you once the job has finished.
 
 ```bash
 $ nano helloworld.pbs
@@ -371,7 +367,7 @@ helloworld
 ^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
 ```
 
-* Use the arrow keys to move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
+* Using the arrow keys, move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
 * Press `Enter` to add a blank line and type: `#PBS -m abe -M youremail@university.edu`.
 * Hold down `Ctrl`+`x` to exit `nano`.
 
@@ -400,26 +396,26 @@ Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's
 | Queue | Wall Time Limit | Description |
 | ----- | --------------- | ----------- |
 | batch | 120 hours (120:00:00) | The default queue. |
-| express | 1 hour (1:00:00) | For short jobs, and debugging or testing scripts. Only contains two compute nodes. |
+| express | 1 hour (1:00:00) | For running short jobs and testing scripts. Only contains two compute nodes. |
 | bigmem | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card. |
-| killable | 504 hours (504:00:00) | For long running jobs. HPCC administrators may stop jobs in this queue at any time. |
+| killable | 504 hours (504:00:00) | For long jobs. HPCC administrators may stop jobs in this queue at any time. |
 
 ## Processors Per Node
 Each compute node on Cowboy has 12 processors (cores) and 32 GB of RAM.
 
 ### Applications that use a single node
-If your code only uses a single core, it is better to only one core:
+If your code only uses a single core, it is better to request one processor.
 
 ```bash
 #PBS -l nodes=1:ppn=1
 ```
 
-If your code can use all 12 cores efficiently, request all 12 cores:
+If your code can use all 12 cores efficiently, request all 12 cores.
 ```bash
 #PBS -l nodes=1:ppn=12
 ```
 
-Here is an example script for a job that uses all 12 cores on a single node.
+Here is an example script for a job that uses all 12 cores.
 
 ```bash
 #!/bin/bash
@@ -434,7 +430,7 @@ cd $PBS_O_WORKDIR
 <put the commands to run your application here>
 ```
 
-> Make sure to remove the enclosing brackets (`< >`) in the above example. Don't make the mistake of putting your module name and job commands inside of them.
+> Make sure to remove the enclosing brackets (`< >`) in the example. Don't make the mistake of putting your module name and job commands inside them.
 
 ### Applications that use multiple nodes
 Here is an example submission script for a job that uses Message Passing Interface (MPI) to run on more than one node.
@@ -454,6 +450,8 @@ mpirun -np ${NP} ./yourexecutable
 ```
 
 # Contact Information
+Please contact us if you have any questions.
+
 **Email:** [hpcc@okstate.edu](mailto:hpcc@okstate.edu "HPCC Staff Email")
 
 **Website:** [hpcc.okstate.edu](https://hpcc.okstate.edu/ "OSU HPCC Website")
