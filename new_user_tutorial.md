@@ -336,3 +336,57 @@ Hello pete I am running on node n245.cluster
 waiting for 10 seconds
 successfully finished!
 ```
+
+# Nano
+Nano is a text editor for the terminal. You can use Nano to edit the example script to fit your job’s needs.
+
+* Add a command telling Cowboy to email you once the job has completed. Edit the submission script using `nano`.
+
+```bash
+$ nano helloworld.pbs
+
+  GNU nano 2.0.9            File: helloworld.pbs                                
+
+#!/bin/bash
+#PBS -q express
+#   specify the queue batch, express or bigmem
+#PBS -l nodes=1:ppn=1
+#   request 1 processor on 1 node
+#PBS -l walltime=10:00
+# choose a walltime slightly longer than your job will take
+#PBS -j oe
+cd $PBS_O_WORKDIR
+
+module load examples
+
+helloworld
+
+
+
+
+
+
+                               [ Read 14 lines ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
+```
+
+* Use the arrow keys to move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
+* Press `Enter` to add a blank line and type: `#PBS -m abe -M youremail@university.edu`.
+* Hold down `Ctrl`+`x` to exit `nano`.
+
+```bash
+Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    
+ Y Yes
+ N No           ^C Cancel
+```
+
+* Press `y` to save.
+
+```bash
+File Name to Write: helloworld.pbs                                              
+^G Get Help         ^T To Files         M-M Mac Format      M-P Prepend
+^C Cancel           M-D DOS Format	M-A Append          M-B Backup File
+```
+
+* Press `Enter` to keep the same filename.
