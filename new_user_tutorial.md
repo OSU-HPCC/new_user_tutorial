@@ -145,3 +145,47 @@ Globus is an online service which facilitates fault tolerant, large data transfe
 * Once both endpoints are entered correctly, click one of the arrows to start the file transfer.
 
 For more information, visit the [Globus website](https://www.globus.org/ "Globus Website"). The Globus website has several [quick start guides](https://support.globus.org/forums/20538617 "Globus Quick Start Guides").
+
+## WinSCP (Windows)
+
+* Download the "Portable executables" from the [WinSCP Website](http://winscp.net/eng/download.php).
+* The download is a zip archive with the file *WinSCP.exe*. Place *WinSCP.exe* on your computer's desktop. This is the only file you need.
+* Double-click the WinSCP icon.
+* A window like the one below will open:
+
+![WinSCP](img/winscp.png "WinSCP")
+
+* In the *Host name* box type `cowboy.hpc.okstate.edu`.
+* In the *User name* box enter your username
+> If you want to save the above information, click *Save* under the *User name* box. In the future, you can double-click on the session to log in.
+* Click *Login*.
+* Once you are connected, you will see a window similar to the one below.
+
+![WinSCP Connected](img/winscp_connected.png "WinSCP After Logging In")
+
+* The left side contains your files, and the right side has your home directory on Cowboy
+* You can drag and drop files in either direction.
+
+## Cyberduck (Windows and Mac)
+
+* Download Cyberduck from their [website](https://cyberduck.io/ "Cyberduck Website")
+* Click the *Download* icon **below** the duck.
+> The *Start Download* icon on the right of the duck is an advertisement.
+* After downloading and opening Cyberduck, you should have a window that looks similar to this:
+
+![Cyberduck](img/cyberduck.png "Cyberduck")
+
+* Click the *Open Connection* icon at the top left.
+* Choose the "SFTP" (SSH File Transfer Protocol) option in the drop down menu at the top.
+* For *Server*, type `cowboy.hpc.okstate.edu`.
+* Change the *Port* to `22`.
+* Enter your Cowboy username and password.
+* Click *Connect*.
+* Your Cyberduck window should now look like the picture below.
+* You can drag and drop files in both directions from this window.
+
+![Cyberduck Connected](img/cyberduck_connected.png "Cyberduck After Logging In")
+
+## Filezilla (Windows, Linux, and Mac)
+
+* Download Filezilla
