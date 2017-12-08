@@ -390,3 +390,16 @@ File Name to Write: helloworld.pbs
 ```
 
 * Press `Enter` to keep the same filename.
+
+# Additional Information
+This section explains more about job queues and "processors per node."
+
+## Job Queues
+Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's four job queues.
+
+| Queue | Wall Time Limit | Description |
+| ----- | --------------- | ----------- |
+| batch | 120 hours (120:00:00) | The default queue. |
+| express | 1 hour (1:00:00) | For short jobs, and debugging or testing scripts. Only contains two compute nodes. |
+| bigmem | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card. |
+| killable | 504 hours (504:00:00) | For long running jobs. HPCC administrators may stop jobs in this queue at any time. |
