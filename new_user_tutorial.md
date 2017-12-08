@@ -90,6 +90,7 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `tar` | Tar | Creates file archives. |
 | `man` | Manual | Allows user to look up entries in the manual. |
 | `exit` | Exit | Quits the terminal session. |
+| `|` | Pipe | The pipe character is placed between two commands. It takes the output from the first command and turns it into input for the second command. |
 table: Linux Commands
 
 | Shorthand | Terminal's Interpretation |
@@ -223,3 +224,115 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 > If Pete wanted to put `examplefile.txt` in his `/data` folder in `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
 * Enter your Cowboy password.
 * You will see the filename and "100%" once the transfer is complete.
+
+# Scheduler
+When you log into Cowboy, you are located on one of Cowboy’s login nodes. You can edit files here, but you must use the scheduler to run your job. The scheduler takes information from you, finds the best compute node(s) to use, and runs your job there.
+
+![Cowboy System](img/cowboy_log_in.png "Cowboy's Structure")
+
+The most effective way to use Cowboy is as follows:
+
+* Log in.
+* Save information about your job in a submission script.
+* Submit your submission script to the scheduler.
+* Log out and wait for your job to complete.
+> You can set up your submission script so that the scheduler sends you an email once your job has [finished](#nano).
+
+The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference the list of [Linux commands](#linux-commands).
+
+# Submission Scripts
+Submission scripts give information about our job to the scheduler. Remember to use your username in place of `pete` in the following examples.
+
+* From the login node, change to the scratch directory and create a new directory called `sample`.
+
+```bash
+$ cd /scratch/pete
+$ mkdir sample
+$ cd sample
+$ pwd
+/home/pete/sample
+```
+
+* Copy an example submission script to your new directory.
+
+```bash
+$ cp /opt/examples/helloworld.pbs .
+$ ls
+helloworld.pbs
+```
+
+* Display the contents of this submission script by using `cat`.
+
+```bash
+$ cat helloworld.pbs
+#!/bin/bash
+#PBS -q express
+#    specify the queue batch, express or bigmem
+#PBS -l nodes=1:ppn=1
+#    request 1 processor on 1 node
+#PBS -l walltime=10:00
+#PBS -j oe
+cd $PBS_O_WORKDIR
+
+module load examples
+
+helloworld
+```
+
+Any line that begins with `#` is a comment. It is for your notes and is ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. For more information about each of the lines in the submission script, see the table below.
+
+| Line | Meaning |
+| ---- | ------- |
+| `#PBS -q express` | Determines what queue your job will wait in before it runs. |
+| `#PBS -l nodes=1:ppn=1` | Determine how many nodes and processors per node (ppn) your job will need. |
+| `#PBS -l wlltime=10:00` | Determines your job's time limit. |
+| `#PBS -j oe` | Please make sure all your submission scripts include this line. It will help HPCC staff assist you in case your job has an error. |
+| `cd $PBS_O_WORKDIR` | Tells the system where your job is located. Please make sure all your submission scripts include this line. |
+| `module load` | Loads any needed software to run your job. |
+| `helloworld` | The command to start your job. This command will be change depending on your job. |
+table: Scheduler Commands
+
+> Please try to accurately predict how long your job will take. If the wall time is too long, it may delay your job's start time. If your job is taking longer than you expected, please email [HPCC staff](mailto:hpcc@okstate.edu) to request a wall time extension.
+
+If you have any questions about job queues, nodes an processors or wall time limits, please email [HPCC staff](mailto:hpcc@okstate.edu).
+
+# Submitting Jobs
+Please submit all jobs to the scheduler. Your job will run as soon as resources are available. Since Cowboy is a shared resource, the scheduler determines when to begin your job. **Do not** run a job on a login node.
+
+* Continue the exersice by using `qsub` to submit your job.
+
+```bash
+$ qsub helloworld.pbs
+414.mgmt1
+```
+
+This command submits the job to the scheduler and returns a job ID number.
+
+* To see all the running jobs, enter the command `showq`.
+
+* To view only your jobs, add `grep` and `|` to your command.
+
+```bash
+$ showq | grep pete
+414 pete Running 1 00:59:28 Tue Sep 18 11:02:23
+```
+
+* Use `qpeek` and the job ID number to see the output of your job while it is running.
+
+```bash
+$ qpeek 414
+Hello pete I am running on node n245.cluster
+```
+
+* You can stop a running job by using `qdel` and the job ID number: `qdel 414`.
+
+* Once your job finishes, you can view the output by looking at the file created by the scheduler. This file be named by the convention `jobname.ojobidnumber`.
+
+```bash
+$ ls
+helloworld.pbs.o414 helloworld.pbs
+$ cat helloworld.pbs.o414
+Hello pete I am running on node n245.cluster
+waiting for 10 seconds
+successfully finished!
+```
