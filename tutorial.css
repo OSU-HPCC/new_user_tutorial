@@ -1,0 +1,17 @@
+/* Give links an "OSU" look */
+a {
+	text-decoration: none;
+	padding-bottom: 0.5px;
+	border-bottom: 4px solid #FF7300
+}
+
+a:link {
+	color:inherit;
+}
+
+a:visited {
+	color:inherit;
+}
+
+a:active {
+	color:#FF7300
