@@ -51,7 +51,6 @@ Your mouse has no function within the terminal. Apart from copy and paste comman
 | Mac Terminal | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
 | Linux's xterm | Highlighting with a mouse is equivalent to copy. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy. |
-table: Copy Commands
 
 | **System** | **Action** |
 | ---------- | ---------- |
@@ -59,7 +58,6 @@ table: Copy Commands
 | Mac Terminal | The key combination `Command`+`v` will paste. |
 | Linux's xterm | Middle-clicking is equivalent to paste. |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`v` will paste. |
-table: Paste Commands
 
 # Changing Your Password
 It is important to change your password when you log in the first time. Change your password using the `passwd` command.
@@ -90,14 +88,12 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `man` | Manual | Allows users to look up manual entries. |
 | `exit` | Exit | Ends the session. |
 | `\|` | Pipe | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
-table: Linux Commands
 
 | Shorthand | Terminal's Interpretation |
 | --------- | ------------------------- |
 | `..` | One directory up from the current directory. |
 | `.` | The current directory. |
 | `~` | The user's home directory. |
-table: Terminal Shorthand
 
 | Key Combination | Action |
 | --------------- | ------ |
@@ -105,7 +101,6 @@ table: Terminal Shorthand
 | The up arrow | Cycles through previous commands. |
 | `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
 | `Ctrl`+`c` | Stops a running command. |
-table: Keyboard Shortcuts
 
 The OSU HPCC website maintains a [page](https://hpcc.okstate.edu/content/hpc-education-resources) of Linux tutorials.
 
@@ -286,7 +281,6 @@ Lines begining with `#` are comments. They serve as your notes, but are ignored 
 | `cd $PBS_O_WORKDIR` | Tells the system where your job is located. Please make sure all your submission scripts include this line. |
 | `module load` | Loads any needed software to run your job. |
 | `helloworld` | The command to start your job. This command will change depending on your job. |
-table: Scheduler Commands
 
 > Please try to accurately predict how long your job will take. If the wall time is too long, it may delay your job's start time. If your job is taking longer than you expected, please email [HPCC staff](mailto:hpcc@okstate.edu) to request a wall time extension.
 
