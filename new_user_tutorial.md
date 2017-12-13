@@ -45,18 +45,18 @@ Macintosh operating systems already have a terminal application.
 ### Using your mouse
 Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard.
 
-| **System** | **Action** |
-| ---------- | ---------- |
-| Putty | Highlighting with a mouse is equivalent to copy. |
-| Mac Terminal | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
-| Linux's xterm | Highlighting with a mouse is equivalent to copy. |
-| Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy. |
+| **System**             | **Action**                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------- |
+| Putty                  | Highlighting with a mouse is equivalent to copy.                                  |
+| Mac Terminal           | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
+| Linux's xterm          | Highlighting with a mouse is equivalent to copy.                                  |
+| Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy.                     |
 
-| **System** | **Action** |
-| ---------- | ---------- |
-| Putty | Right-clicking is equivalent to paste. |
-| Mac Terminal | The key combination `Command`+`v` will paste. |
-| Linux's xterm | Middle-clicking is equivalent to paste. |
+| **System**             | **Action**                                         |
+| ---------------------- | ----------                                         |
+| Putty                  | Right-clicking is equivalent to paste.             |
+| Mac Terminal           | The key combination `Command`+`v` will paste.      |
+| Linux's xterm          | Middle-clicking is equivalent to paste.            |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`v` will paste. |
 
 # Changing Your Password
@@ -73,34 +73,34 @@ It is important to change your password when you log in the first time. Change y
 # Linux Commands
 Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 
-| Command | Name | Purpose |
-| ------- | ---- | ------- |
-| `pwd` | Print Working Directory | Displays your current location. |
-| `ls` | List | List all the files and directories within a directory. |
-| `cd` | Change Directory | Moves the user to a different directory. |
-| `cp` | Copy | Copies a file. |
-| `mv` | Move | Moves a file (also renames a file). |
-| `rm` | Remove | *Permanantly* deletes a file. |
-| `grep` | Grep | Searches a file's contents. |
-| `nano -w` | Nano | Is a text editor. |
-| `diff` | Diff | Compares differences between files. |
-| `tar` | Tar | Creates file archives. |
-| `man` | Manual | Allows users to look up manual entries. |
-| `exit` | Exit | Ends the session. |
-| `\|` | Pipe | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
+| Command   | Name                    | Purpose                                                                                                                   |
+| --------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `pwd`     | Print Working Directory | Displays your current location.                                                                                           |
+| `ls`      | List                    | List all the files and directories within a directory.                                                                    |
+| `cd`      | Change Directory        | Moves the user to a different directory.                                                                                  | 
+| `cp`      | Copy                    | Copies a file.                                                                                                            |
+| `mv`      | Move                    | Moves a file (also renames a file).                                                                                       |
+| `rm`      | Remove                  | *Permanantly* deletes a file.                                                                                             |
+| `grep`    | Grep                    | Searches a file's contents.                                                                                               |
+| `nano -w` | Nano                    | Is a text editor.                                                                                                         |
+| `diff`    | Diff                    | Compares differences between files.                                                                                       |
+| `tar`     | Tar                     | Creates file archives.                                                                                                    |
+| `man`     | Manual                  | Allows users to look up manual entries.                                                                                   |
+| `exit`    | Exit                    | Ends the session.                                                                                                         |
+| `\|`      | Pipe                    | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
 
-| Shorthand | Terminal's Interpretation |
-| --------- | ------------------------- |
-| `..` | One directory up from the current directory. |
-| `.` | The current directory. |
-| `~` | The user's home directory. |
+| Shorthand | Terminal's Interpretation                    |
+| --------- | -------------------------------------------- |
+| `..`      | One directory up from the current directory. |
+| `.`       | The current directory.                       |
+| `~`       | The user's home directory.                   |
 
-| Key Combination | Action |
-| --------------- | ------ |
-| `Tab` | Completes partially typed commands or file names. |
-| The up arrow | Cycles through previous commands. |
-| `Ctrl`+`d` | Exits the terminal (same as typing `exit`). |
-| `Ctrl`+`c` | Stops a running command. |
+| Key Combination | Action                                            |
+| --------------- | ------------------------------------------------- |
+| `Tab`           | Completes partially typed commands or file names. |
+| The up arrow    | Cycles through previous commands.                 |
+| `Ctrl`+`d`      | Exits the terminal (same as typing `exit`).       |
+| `Ctrl`+`c`      | Stops a running command.                          |
 
 The OSU HPCC website maintains a [page](https://hpcc.okstate.edu/content/hpc-education-resources) of Linux tutorials.
 
@@ -272,15 +272,15 @@ helloworld
 
 Lines begining with `#` are comments. They serve as your notes, but are ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. See the table below for more information.
 
-| Line | Meaning |
-| ---- | ------- |
-| `#PBS -q express` | Determines what queue your job will wait in before it begins. |
-| `#PBS -l nodes=1:ppn=1` | Determine how many nodes, and processors per node (ppn), your job will need. |
-| `#PBS -l wlltime=10:00` | Determines your job's time limit. |
-| `#PBS -j oe` | Please make sure all your submission scripts include this line. It will help HPCC staff assist you if your job has an error. |
-| `cd $PBS_O_WORKDIR` | Tells the system where your job is located. Please make sure all your submission scripts include this line. |
-| `module load` | Loads any needed software to run your job. |
-| `helloworld` | The command to start your job. This command will change depending on your job. |
+| Line                    | Meaning                                                                                                                      |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `#PBS -q express`       | Determines what queue your job will wait in before it begins.                                                                |
+| `#PBS -l nodes=1:ppn=1` | Determine how many nodes, and processors per node (ppn), your job will need.                                                 |
+| `#PBS -l wlltime=10:00` | Determines your job's time limit.                                                                                            |
+| `#PBS -j oe`            | Please make sure all your submission scripts include this line. It will help HPCC staff assist you if your job has an error. |
+| `cd $PBS_O_WORKDIR`     | Tells the system where your job is located. Please make sure all your submission scripts include this line.                  |
+| `module load`           | Loads any needed software to run your job.                                                                                   |
+| `helloworld`            | The command to start your job. This command will change depending on your job.                                               |
 
 > Please try to accurately predict how long your job will take. If the wall time is too long, it may delay your job's start time. If your job is taking longer than you expected, please email [HPCC staff](mailto:hpcc@okstate.edu) to request a wall time extension.
 
@@ -387,12 +387,12 @@ This section explains more about job queues and "processors per node."
 ## Job Queues
 Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's four job queues.
 
-| Queue | Wall Time Limit | Description |
-| ----- | --------------- | ----------- |
-| batch | 120 hours (120:00:00) | The default queue. |
-| express | 1 hour (1:00:00) | For running short jobs and testing scripts. Only contains two compute nodes. |
-| bigmem | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card. |
-| killable | 504 hours (504:00:00) | For long jobs. HPCC administrators may stop jobs in this queue at any time. |
+| Queue    | Wall Time Limit       | Description                                                                  |
+| -------- | --------------------- | ---------------------------------------------------------------------------- |
+| batch    | 120 hours (120:00:00) | The default queue.                                                           |
+| express  | 1 hour (1:00:00)      | For running short jobs and testing scripts. Only contains two compute nodes. |
+| bigmem   | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card.  |
+| killable | 504 hours (504:00:00) | For long jobs. HPCC administrators may stop jobs in this queue at any time.  |
 
 ## Processors Per Node
 Each compute node on Cowboy has 12 processors (cores) and 32 GB of RAM.
