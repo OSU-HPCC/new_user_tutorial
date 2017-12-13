@@ -38,4 +38,5 @@ done < $HEADERS
 
 # Add html <div> so that it integrates with css sheet
 sed -i '1s/^/\<div class=\"sidenav\"\>/' toc.md
-sed -ie "\$a\<\/div\>" toc.md
+sed -i "\$a\<\/div\>" toc.md
+sed -i "\$a\<div class=\"content\"\>" toc.md

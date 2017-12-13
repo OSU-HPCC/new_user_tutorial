@@ -1,6 +1,8 @@
 ## html			: Create html version of tutorial.
 tutorial.html : tutorial.css toc.md tutorial.md
-	pandoc -c tutorial.css tutorial.md -o $@
+	pandoc -c tutorial.css tutorial.md -o no_close.html
+	./closing_tag.sh no_close.html
+	rm -f no_close.html
 
 ## tutorial.md		: Creates Markdown with table of contents
 tutorial.md : toc.md
