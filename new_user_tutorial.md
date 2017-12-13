@@ -343,7 +343,7 @@ $ nano helloworld.pbs
 #PBS -l nodes=1:ppn=1
 #   request 1 processor on 1 node
 #PBS -l walltime=10:00
-# choose a walltime slightly longer than your job will take
+#  choose a walltime slightly longer than your job will take
 #PBS -j oe
 cd $PBS_O_WORKDIR
 
