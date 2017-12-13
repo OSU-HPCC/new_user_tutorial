@@ -9,7 +9,7 @@ tutorial.md : toc.md
 	cat new_user_tutorial.md >> tutorial.md
 
 ## toc.md		: Create Markdown table of contents.
-toc.md : new_user_tutorial.md
+toc.md : new_user_tutorial.md make_toc.sh
 	./make_toc.sh new_user_tutorial.md
 
 ## clean		: Remove generated files and start over.
@@ -17,6 +17,8 @@ toc.md : new_user_tutorial.md
 clean :
 	rm -f *.html
 	rm -f *.pdf
+	rm -f toc.md
+	rm -f tutorial.md
 
 .PHONY : help
 help : Makefile
