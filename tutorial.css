@@ -56,6 +56,8 @@ body {
 }
 
 /* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body,h1,h2,h3,h4,h5 {
 	font-family: "Poppins", sans-serif;
 }
@@ -65,4 +67,28 @@ img {
 	display: block;
 	margin: auto;
 	width: 60%;
+}
+
+/* Tables */
+th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+th {
+	background-color: #FF7300;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+html, body {
+	height: 100%;
+}
+
+table {
+	width: 85%;
+	display: block;
+	margin: auto;
 }
