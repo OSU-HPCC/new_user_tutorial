@@ -23,9 +23,10 @@
 
 [Additional Information](#additional-information)
 
+[Download Tutorial](#download-tutorial)
+
 [Contact Information](#contact-information)
 
-[Download Tutorial](#download-tutorial)
 </div>
 
 <div class="content">
