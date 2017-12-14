@@ -19,16 +19,22 @@ Most Windows operating systems do not already have a terminal application. Putty
 - Next time you open Putty, you can double-click this saved session and it will open a login screen directly.
 - After saving your settings, click *Open*. Enter your Cowboy username and press the `Enter` key.
 - Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+
 > Nothing will display while you type your password. This is a security feature.
+
 - To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Linux
 Linux operating systems already have a terminal application. You can launch a terminal from your computer’s application menu.
 
 - In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
+
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
+
 - Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+
 > Nothing will display while you type your password. This is a security feature.
+
 - To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Mac
@@ -37,9 +43,13 @@ Macintosh operating systems already have a terminal application.
 - Open your *Finder* (hard drive) window.
 - Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
 - In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
+
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
+
 - Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+
 > Nothing will display while you type your password. This is a security feature.
+
 - To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ### Using your mouse
@@ -66,8 +76,11 @@ It is important to change your password when you log in the first time. Change y
 
 - After logging in, type `passwd`.
 - Enter your old password, then your new password twice.
+
 > Nothing will display while you type your password. This is a security feature.
+
 - Please use a **strong** password.
+
 > Passwords should be at least eight characters long and include numbers, letters, and special characters.
 
 # Linux Commands
@@ -149,7 +162,9 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 * In the *Host name* box, type `cowboy.hpc.okstate.edu`.
 * In the *User name* box, enter your username.
+
 > If you want to save the above information, click *Save*. In the future, you can double-click the session name directly to log in.
+
 * Click *Login*.
 * You will see a window similar to the one below once you have connected.
 
@@ -162,7 +177,9 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 * Download Cyberduck from their [website](https://cyberduck.io/ "Cyberduck Website")
 * Click the *Download* icon **below** the duck.
+
 > Warning! The *Start Download* icon on the right of the duck is an advertisement.
+
 * After downloading and opening Cyberduck, you should see a window similar to this:
 
 ![Cyberduck](img/cyberduck.png "Cyberduck")
@@ -187,7 +204,9 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 ![FileZilla](img/filezilla.png "FileZilla")
 
 * For *Host*, type `cowboy.hpc.okstate.edu`.
+
 > `cowboy.hpc.okstate.edu` should automatically change to `sftp://cowboy.hpc.okstate.edu`.
+
 * Enter your Cowboy username and password.
 * Change *Port* to `22`.
 * Click *Quickconnect*.
@@ -203,7 +222,9 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 * Open a terminal on your local machine.
 * Navigate to the directory where you want to place the file.
 * Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`.
+
 > If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#linux-commands) for the current working directory.
+
 * Enter your Cowboy password.
 * You will see the file name and "100%" once the transfer completes.
 
@@ -212,7 +233,9 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 * Open a terminal on your local machine.
 * Navigate to the directory where your file is located.
 * Type `scp localfilename yourusername@cowboy.hpc.okstate.edu:/directory_where_you_want_to_put_the_file/`.
+
 > If Pete wanted to put `examplefile.txt` in his `/data` folder on `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
+
 * Enter your Cowboy password.
 * You will see the file name and "100%" once the transfer completes.
 
@@ -227,6 +250,7 @@ The most effective way to use Cowboy is as follows:
 * Save information about your job in a submission script.
 * Submit your submission script to the scheduler.
 * Log out and wait for your job to finish.
+
 > You can set up your submission script so that the scheduler sends you an email once your job is [finished](#nano).
 
 The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference this guides's list of [Linux commands](#linux-commands).

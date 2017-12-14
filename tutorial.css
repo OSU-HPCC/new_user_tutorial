@@ -95,6 +95,9 @@ table {
 }
 
 /* Code blocks */
+pre {
+	margin: 15px 0;
+}
 code {
 	margin: 0 3px;
 	padding: 0 2px;
@@ -134,4 +137,19 @@ pre {
 pre code {
 	background-color: transparent;
 	border: none;
+}
+
+/* Blockquotes */
+blockquote {
+	border-left: 4px solid #dddddd;
+	padding: 0 15px;
+	color: #777777;
+}
+
+blockquote > :first-child {
+	margin-top: 0;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
 }
