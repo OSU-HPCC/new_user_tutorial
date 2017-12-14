@@ -1,34 +1,3 @@
-<div class="sidenav">
-# New User Tutorial
-
-[Using a Terminal](#using-a-terminal)
-
-[Logging into Cowboy](#logging-into-cowboy)
-
-[Changing Your Password](#changing-your-password)
-
-[Linux Commands](#linux-commands)
-
-[File System](#file-system)
-
-[File Transfers](#file-transfers)
-
-[Scheduler](#scheduler)
-
-[Submission Scripts](#submission-scripts)
-
-[Submitting Jobs](#submitting-jobs)
-
-[Nano](#nano)
-
-[Additional Information](#additional-information)
-
-[Download Tutorial](#download-tutorial)
-
-[Contact Information](#contact-information)
-
-</div>
-
 <div class="content">
 
 <div class="splashpage">
