@@ -11,7 +11,7 @@ Most Windows operating systems do not already have a terminal application. Putty
 2. Choose the file "putty.exe," save it to your desktop, then run it.
 3. A window will open that looks like the image below.
 
-![Putty](img/putty.png "Putty Login Screen")
+![](img/putty.png "Putty Login Screen")
 
 4. Enter `cowboy.hpc.okstate.edu` in *Host Name* text box.
 5. Verify *Connection type* is "SSH," and Port number is `22`.
@@ -130,7 +130,7 @@ Users also have access to the `/opt` directory. `/opt` contains additional softw
 
 > If Cowboy does not have software you need, send us an [email](mailto:hpcc@okstate.edu "HPCC Email") and request a software install.
 
-![Cowboy File System](img/cowboy_file_system.png "Cowboy's File System")
+![](img/cowboy_file_system.png "Cowboy's File System")
 
 # File Transfers
 Several options exist for moving files between your computer and Cowboy. Globus is a file transfer application for large data transfers. Smaller data transfers can utilize one of the GUI options below. If you prefer a command-line interface, please see the last set of directions in this section.
@@ -144,7 +144,7 @@ Globus is an online service which facilitates fault tolerant, large data transfe
 4. Find the *Manage Data* drop-down list and click "Transfer Files".
 5. Your screen will look similar to this one:
 
-![Globus](img/globus.png "Globus Screen")
+![](img/globus.png "Globus Screen")
 
 6. The Cowboy "Endpoint" is `okstate#cowboy1`.
 7. Once you have entered both endpoints, click one of the arrows to start the transfer.
@@ -158,7 +158,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 3. Double-click the WinSCP icon.
 4. A window like the one below will open:
 
-![WinSCP](img/winscp.png "WinSCP")
+![](img/winscp.png "WinSCP")
 
 5. In the *Host name* box, type `cowboy.hpc.okstate.edu`.
 6. In the *User name* box, enter your username.
@@ -168,7 +168,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 7. Click *Login*.
 8. You will see a window similar to the one below once you have connected.
 
-![WinSCP Connected](img/winscp_connected.png "WinSCP After Logging In")
+![](img/winscp_connected.png "WinSCP After Logging In")
 
 9. The left side contains your files, and the right side has your Cowboy home directory.
 10. You can drag and drop files in either direction.
@@ -182,7 +182,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 3. After downloading and opening Cyberduck, you should see a window similar to this:
 
-![Cyberduck](img/cyberduck.png "Cyberduck")
+![](img/cyberduck.png "Cyberduck")
 
 4. Click the *Open Connection* icon at the top left.
 5. Choose the "SFTP" (SSH File Transfer Protocol) option in the drop down menu at the top.
@@ -193,7 +193,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 10. Your Cyberduck window now looks like the picture below.
 11. You can drag and drop files in both directions.
 
-![Cyberduck Connected](img/cyberduck_connected.png "Cyberduck After Logging In")
+![](img/cyberduck_connected.png "Cyberduck After Logging In")
 
 ## FileZilla (Windows, Linux, and Mac)
 
@@ -201,7 +201,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 2. Click the *Download FileZilla Client -  All platforms* icon.
 3. After downloading and opening FileZilla, your window looks like the following image:
 
-![FileZilla](img/filezilla.png "FileZilla")
+![](img/filezilla.png "FileZilla")
 
 4. For *Host*, type `cowboy.hpc.okstate.edu`.
 
@@ -213,7 +213,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 8. Your window is now like the picture below.
 9. You can drag and drop files in either direction.
 
-![FileZilla Connected](img/filezilla_connected.png "FileZilla After Logging In")
+![](img/filezilla_connected.png "FileZilla After Logging In")
 
 ## Command-line File Transfers (Linux and Mac)
 
@@ -242,7 +242,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 # Scheduler
 When you log into Cowboy, you are located on one of Cowboy’s login nodes. You can edit files here, but you must use the scheduler to run your job. The scheduler takes information from you, finds the best compute node(s) to use, and runs your job.
 
-![Cowboy System](img/cowboy_log_in.png "Cowboy's Structure")
+![](img/cowboy_log_in.png "Cowboy's Structure")
 
 The most effective way to use Cowboy is as follows:
 
