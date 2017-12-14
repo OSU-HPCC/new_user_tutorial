@@ -1,3 +1,4 @@
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
@@ -40,6 +41,7 @@ body {
 	background-image: linear-gradient(to right, #ff7300, white 98%);
 	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
 }
 
 .sidenav a {

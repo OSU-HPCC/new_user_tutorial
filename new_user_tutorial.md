@@ -1,3 +1,32 @@
+<div class="sidenav">
+# New User Tutorial
+
+[Using a Terminal](#using-a-terminal)
+
+[Logging into Cowboy](#logging-into-cowboy)
+
+[Changing Your Password](#changing-your-password)
+
+[Linux Commands](#linux-commands)
+
+[File System](#file-system)
+
+[File Transfers](#file-transfers)
+
+[Scheduler](#scheduler)
+
+[Submission Scripts](#submission-scripts)
+
+[Submitting Jobs](#submitting-jobs)
+
+[Nano](#nano)
+
+[Additional Information](#additional-information)
+
+[Contact Information](#contact-information)
+</div>
+
+<div class="content">
 # Using a Terminal
 Most computer users are familiar with a graphical user interface (GUI). A GUI consists of visual icons and directories that are navigated using a mouse. Most high performance computing (HPC) systems use a command-line interface because it allows a user to efficiently do many common HPC tasks. While there is a steep learning curve associated with using a terminal, it has a set of features that allows researchers to automate tasks, saving time and money.
 
@@ -487,3 +516,4 @@ Please contact us if you have any questions.
 **Email:** [hpcc@okstate.edu](mailto:hpcc@okstate.edu "HPCC Staff Email")
 
 **Website:** [hpcc.okstate.edu](https://hpcc.okstate.edu/ "OSU HPCC Website")
+</div>
