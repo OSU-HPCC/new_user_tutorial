@@ -7,50 +7,50 @@ In order to log into Cowboy, you need to use a terminal with Secured Shell (SSH)
 ## Windows
 Most Windows operating systems do not already have a terminal application. Putty is a free, open-source terminal emulator that supports SSH.
 
-- Download Putty from the [Putty website](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html "Putty").
-- Choose the file "putty.exe," save it to your desktop, then run it.
-- A window will open that looks like the image below.
+1. Download Putty from the [Putty website](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html "Putty").
+2. Choose the file "putty.exe," save it to your desktop, then run it.
+3. A window will open that looks like the image below.
 
 ![Putty](img/putty.png "Putty Login Screen")
 
-- Enter `cowboy.hpc.okstate.edu` in *Host Name* text box.
-- Verify *Connection type* is "SSH," and Port number is `22`.
-- In *Saved Sessions*, you can name these settings, i.e. `Cowboy`, and click *Save*.
-- Next time you open Putty, you can double-click this saved session and it will open a login screen directly.
-- After saving your settings, click *Open*. Enter your Cowboy username and press the `Enter` key.
-- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+4. Enter `cowboy.hpc.okstate.edu` in *Host Name* text box.
+5. Verify *Connection type* is "SSH," and Port number is `22`.
+6. In *Saved Sessions*, you can name these settings, i.e. `Cowboy`, and click *Save*.
+7. Next time you open Putty, you can double-click this saved session and it will open a login screen directly.
+8. After saving your settings, click *Open*. Enter your Cowboy username and press the `Enter` key.
+9. Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 
 > Nothing will display while you type your password. This is a security feature.
 
-- To end your session, type `exit` or `logout`, followed by the `Enter` key.
+10. To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Linux
 Linux operating systems already have a terminal application. You can launch a terminal from your computer’s application menu.
 
-- In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
+1. In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
 
-- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+2. Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 
 > Nothing will display while you type your password. This is a security feature.
 
-- To end your session, type `exit` or `logout`, followed by the `Enter` key.
+3. To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ## Mac
 Macintosh operating systems already have a terminal application.
 
-- Open your *Finder* (hard drive) window.
-- Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
-- In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
+1. Open your *Finder* (hard drive) window.
+2. Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
+3. In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 
 > If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
 
-- Enter your password, followed by the `Enter` key. Passwords are case sensitive.
+4. Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 
 > Nothing will display while you type your password. This is a security feature.
 
-- To end your session, type `exit` or `logout`, followed by the `Enter` key.
+5. To end your session, type `exit` or `logout`, followed by the `Enter` key.
 
 ### Using your mouse
 Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard.
@@ -74,12 +74,12 @@ It is important to change your password when you log in the first time. Change y
 
 > Be on your guard against phishing emails. HPCC employees will never ask you for your password.
 
-- After logging in, type `passwd`.
-- Enter your old password, then your new password twice.
+1. After logging in, type `passwd`.
+2. Enter your old password, then your new password twice.
 
 > Nothing will display while you type your password. This is a security feature.
 
-- Please use a **strong** password.
+3. Please use a **strong** password.
 
 > Passwords should be at least eight characters long and include numbers, letters, and special characters.
 
@@ -138,80 +138,80 @@ Several options exist for moving files between your computer and Cowboy. Globus 
 ## Globus
 Globus is an online service which facilitates fault tolerant, large data transfers.
 
-* Set up your computer as a Globus endpoint by downloading the [Globus Personal Client](https://www.globus.org/globus-connect-personal "Globus Personal Client").
-* [Create an account](https://www.globusid.org/create "New Globus Account"). 
-* Verify the account and log into Globus.
-* Find the *Manage Data* drop-down list and click "Transfer Files".
-* Your screen will look similar to this one:
+1. Set up your computer as a Globus endpoint by downloading the [Globus Personal Client](https://www.globus.org/globus-connect-personal "Globus Personal Client").
+2. [Create an account](https://www.globusid.org/create "New Globus Account"). 
+3. Verify the account and log into Globus.
+4. Find the *Manage Data* drop-down list and click "Transfer Files".
+5. Your screen will look similar to this one:
 
 ![Globus](img/globus.png "Globus Screen")
 
-* The Cowboy "Endpoint" is `okstate#cowboy1`.
-* Once you have entered both endpoints, click one of the arrows to start the transfer.
+6. The Cowboy "Endpoint" is `okstate#cowboy1`.
+7. Once you have entered both endpoints, click one of the arrows to start the transfer.
 
 For more information, visit the [Globus website](https://www.globus.org/ "Globus Website").
 
 ## WinSCP (Windows)
 
-* Download "Portable executables" from the [WinSCP Website](http://winscp.net/eng/download.php).
-* The download is a zip archive with the file *WinSCP.exe*. Place *WinSCP.exe* on your computer's desktop. This is the only file you need.
-* Double-click the WinSCP icon.
-* A window like the one below will open:
+1. Download "Portable executables" from the [WinSCP Website](http://winscp.net/eng/download.php).
+2. The download is a zip archive with the file *WinSCP.exe*. Place *WinSCP.exe* on your computer's desktop. This is the only file you need.
+3. Double-click the WinSCP icon.
+4. A window like the one below will open:
 
 ![WinSCP](img/winscp.png "WinSCP")
 
-* In the *Host name* box, type `cowboy.hpc.okstate.edu`.
-* In the *User name* box, enter your username.
+5. In the *Host name* box, type `cowboy.hpc.okstate.edu`.
+6. In the *User name* box, enter your username.
 
 > If you want to save the above information, click *Save*. In the future, you can double-click the session name directly to log in.
 
-* Click *Login*.
-* You will see a window similar to the one below once you have connected.
+7. Click *Login*.
+8. You will see a window similar to the one below once you have connected.
 
 ![WinSCP Connected](img/winscp_connected.png "WinSCP After Logging In")
 
-* The left side contains your files, and the right side has your Cowboy home directory.
-* You can drag and drop files in either direction.
+9. The left side contains your files, and the right side has your Cowboy home directory.
+10. You can drag and drop files in either direction.
 
 ## Cyberduck (Windows and Mac)
 
-* Download Cyberduck from their [website](https://cyberduck.io/ "Cyberduck Website")
-* Click the *Download* icon **below** the duck.
+1. Download Cyberduck from their [website](https://cyberduck.io/ "Cyberduck Website")
+2. Click the *Download* icon **below** the duck.
 
 > Warning! The *Start Download* icon on the right of the duck is an advertisement.
 
-* After downloading and opening Cyberduck, you should see a window similar to this:
+3. After downloading and opening Cyberduck, you should see a window similar to this:
 
 ![Cyberduck](img/cyberduck.png "Cyberduck")
 
-* Click the *Open Connection* icon at the top left.
-* Choose the "SFTP" (SSH File Transfer Protocol) option in the drop down menu at the top.
-* For *Server*, type `cowboy.hpc.okstate.edu`.
-* Change the *Port* to `22`.
-* Enter your Cowboy username and password.
-* Click *Connect*.
-* Your Cyberduck window now looks like the picture below.
-* You can drag and drop files in both directions.
+4. Click the *Open Connection* icon at the top left.
+5. Choose the "SFTP" (SSH File Transfer Protocol) option in the drop down menu at the top.
+6. For *Server*, type `cowboy.hpc.okstate.edu`.
+7. Change the *Port* to `22`.
+8. Enter your Cowboy username and password.
+9. Click *Connect*.
+10. Your Cyberduck window now looks like the picture below.
+11. You can drag and drop files in both directions.
 
 ![Cyberduck Connected](img/cyberduck_connected.png "Cyberduck After Logging In")
 
 ## FileZilla (Windows, Linux, and Mac)
 
-* Download FileZilla from their [website](https://filezilla-project.org/ "FileZilla Website").
-* Click the *Download FileZilla Client -  All platforms* icon.
-* After downloading and opening FileZilla, your window looks like the following image:
+1. Download FileZilla from their [website](https://filezilla-project.org/ "FileZilla Website").
+2. Click the *Download FileZilla Client -  All platforms* icon.
+3. After downloading and opening FileZilla, your window looks like the following image:
 
 ![FileZilla](img/filezilla.png "FileZilla")
 
-* For *Host*, type `cowboy.hpc.okstate.edu`.
+4. For *Host*, type `cowboy.hpc.okstate.edu`.
 
 > `cowboy.hpc.okstate.edu` should automatically change to `sftp://cowboy.hpc.okstate.edu`.
 
-* Enter your Cowboy username and password.
-* Change *Port* to `22`.
-* Click *Quickconnect*.
-* Your window is now like the picture below.
-* You can drag and drop files in either direction.
+5. Enter your Cowboy username and password.
+6. Change *Port* to `22`.
+7. Click *Quickconnect*.
+8. Your window is now like the picture below.
+9. You can drag and drop files in either direction.
 
 ![FileZilla Connected](img/filezilla_connected.png "FileZilla After Logging In")
 
@@ -219,25 +219,25 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 
 ### Copy a file *from Cowboy* to your local machine
 
-* Open a terminal on your local machine.
-* Navigate to the directory where you want to place the file.
-* Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`.
+1. Open a terminal on your local machine.
+2. Navigate to the directory where you want to place the file.
+3. Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`.
 
 > If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#linux-commands) for the current working directory.
 
-* Enter your Cowboy password.
-* You will see the file name and "100%" once the transfer completes.
+4. Enter your Cowboy password.
+5. You will see the file name and "100%" once the transfer completes.
 
 ### Copy a file from your local machine *to Cowboy*
 
-* Open a terminal on your local machine.
-* Navigate to the directory where your file is located.
-* Type `scp localfilename yourusername@cowboy.hpc.okstate.edu:/directory_where_you_want_to_put_the_file/`.
+1. Open a terminal on your local machine.
+2. Navigate to the directory where your file is located.
+3. Type `scp localfilename yourusername@cowboy.hpc.okstate.edu:/directory_where_you_want_to_put_the_file/`.
 
 > If Pete wanted to put `examplefile.txt` in his `/data` folder on `/scratch`, he would type `scp examplefile.txt pete@cowboy.hpc.okstate.edu:/scratch/pete/data/`.
 
-* Enter your Cowboy password.
-* You will see the file name and "100%" once the transfer completes.
+4. Enter your Cowboy password.
+5. You will see the file name and "100%" once the transfer completes.
 
 # Scheduler
 When you log into Cowboy, you are located on one of Cowboy’s login nodes. You can edit files here, but you must use the scheduler to run your job. The scheduler takes information from you, finds the best compute node(s) to use, and runs your job.
@@ -246,10 +246,10 @@ When you log into Cowboy, you are located on one of Cowboy’s login nodes. You 
 
 The most effective way to use Cowboy is as follows:
 
-* Log in.
-* Save information about your job in a submission script.
-* Submit your submission script to the scheduler.
-* Log out and wait for your job to finish.
+1. Log in.
+2. Save information about your job in a submission script.
+3. Submit your submission script to the scheduler.
+4. out and wait for your job to finish.
 
 > You can set up your submission script so that the scheduler sends you an email once your job is [finished](#nano).
 
@@ -258,7 +258,7 @@ The following sections contain a guided exercise. This exercise will show you ho
 # Submission Scripts
 Submission scripts give information about your job to the scheduler. Remember to use your username in place of `pete` in the following examples.
 
-* Change to the scratch directory and create a new directory called `sample`.
+1. Change to the scratch directory and create a new directory called `sample`.
 
 ```bash
 $ cd /scratch/pete
@@ -268,7 +268,7 @@ $ pwd
 /home/pete/sample
 ```
 
-* Copy an example submission script to your new directory.
+2. Copy an example submission script to your new directory.
 
 ```bash
 $ cp /opt/examples/helloworld.pbs .
@@ -276,7 +276,7 @@ $ ls
 helloworld.pbs
 ```
 
-* Display the contents of this submission script by using `cat`.
+3. Display the contents of this submission script by using `cat`.
 
 ```bash
 $ cat helloworld.pbs
@@ -313,7 +313,7 @@ If you have questions about job queues, nodes and processors, or wall time limit
 # Submitting Jobs
 Please submit all jobs to the scheduler. Your job will begin as resources become available. Since Cowboy is a shared resource, the scheduler determines when to begin your job. **Do not** run a job on a login node.
 
-* Continue the exercise by using `qsub` to submit your job.
+4. Continue the exercise by using `qsub` to submit your job.
 
 ```bash
 $ qsub helloworld.pbs
@@ -322,25 +322,25 @@ $ qsub helloworld.pbs
 
 This command submits the job to the scheduler and returns a job ID number.
 
-* To see all running jobs, enter the command `showq`.
+5. To see all running jobs, enter the command `showq`.
 
-* To view only your jobs, add `grep` and `|` to your command.
+6. To view only your jobs, add `grep` and `|` to your command.
 
 ```bash
 $ showq | grep pete
 414 pete Running 1 00:59:28 Tue Sep 18 11:02:23
 ```
 
-* Use `qpeek` and the job ID number to see the output of your job while it is running.
+7. Use `qpeek` and the job ID number to see the output of your job while it is running.
 
 ```bash
 $ qpeek 414
 Hello pete I am running on node n245.cluster
 ```
 
-* You can stop a running job by using `qdel` and the job ID number: `qdel 414`.
+8. You can stop a running job by using `qdel` and the job ID number: `qdel 414`.
 
-* Once your job finishes, view the output by looking at the scheduler's output file. It is the file with the naming convention `jobname.ojobidnumber`.
+9. Once your job finishes, view the output by looking at the scheduler's output file. It is the file with the naming convention `jobname.ojobidnumber`.
 
 ```bash
 $ ls
@@ -354,7 +354,7 @@ successfully finished!
 # Nano
 Nano is a terminal text editor. You can use Nano to edit the example script so it fits your job’s needs.
 
-* Use `nano` to add a command telling Cowboy to email you once the job has finished.
+10. Use `nano` to add a command telling Cowboy to email you once the job has finished.
 
 ```bash
 $ nano helloworld.pbs
@@ -385,9 +385,9 @@ helloworld
 ^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
 ```
 
-* Using the arrow keys, move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
-* Press `Enter` to add a blank line and type: `#PBS -m abe -M youremail@university.edu`.
-* Hold down `Ctrl`+`x` to exit `nano`.
+11. Using the arrow keys, move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
+12. Press `Enter` to add a blank line and type: `#PBS -m abe -M youremail@university.edu`.
+13. Hold down `Ctrl`+`x` to exit `nano`.
 
 ```bash
 Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    
@@ -395,7 +395,7 @@ Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
  N No           ^C Cancel
 ```
 
-* Press `y` to save.
+14. Press `y` to save.
 
 ```bash
 File Name to Write: helloworld.pbs                                              
@@ -403,7 +403,7 @@ File Name to Write: helloworld.pbs
 ^C Cancel           M-D DOS Format	M-A Append          M-B Backup File
 ```
 
-* Press `Enter` to keep the same file name.
+15. Press `Enter` to keep the same file name.
 
 # Additional Information
 This section explains more about job queues and "processors per node."
