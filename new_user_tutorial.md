@@ -10,10 +10,10 @@
 Most computer users are familiar with a graphical user interface (GUI). A GUI consists of visual icons and directories that are navigated using a mouse. Most high performance computing (HPC) systems use a command-line interface because it allows a user to efficiently do many common HPC tasks. While there is a steep learning curve associated with using a terminal, it has a set of features that allows researchers to automate tasks, saving time and money.
 
 # Logging into Cowboy
-In order to log into Cowboy, you need to use a terminal with Secured Shell (SSH). After logging in, you will be on one of the cluster's *login nodes*. *Node* refers to a server or computer. Cowboy also includes 254 *compute nodes*. A private network connects the compute nodes together. A *cluster* consists of these nodes, the network, and a file system.
+In order to log into Cowboy, you need to use a terminal with Secured Shell (SSH). After logging in, you will be on one of the cluster's *login nodes*. *Node* refers to a server or computer. Cowboy has two login nodes, and 254 *compute nodes*. A private network connects the compute nodes together. A *cluster* consists of these nodes, the network, and a file system.
 
 ## Windows
-Most Windows operating systems do not already have a terminal application. Putty is a free, open-source terminal emulator that supports SSH.
+Most Windows operating systems do not come with an SSH terminal application. Putty is a free, open-source terminal emulator that supports SSH.
 
 1. Download Putty from the [Putty website](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html "Putty").
 2. Choose the file "putty.exe," save it to your desktop, then run it.
@@ -37,7 +37,7 @@ Linux operating systems already have a terminal application. You can launch a te
 
 1. In a terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 
-> If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
+> If your username is "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
 
 2. Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 
@@ -49,10 +49,10 @@ Linux operating systems already have a terminal application. You can launch a te
 Macintosh operating systems already have a terminal application.
 
 1. Open your *Finder* (hard drive) window.
-2. Double-click on the following sequence: `Applications` folder, `Utilities` folder, `Terminal` icon.
+2. Double-click on the following sequence of icons: `Applications` folder, `Utilities` folder, `Terminal` icon.
 3. In the terminal, type `ssh username@cowboy.hpc.okstate.edu`, where `username` is your username.
 
-> If your username was "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
+> If your username is "pete," you would enter `ssh pete@cowboy.hpc.okstate.edu`.
 
 4. Enter your password, followed by the `Enter` key. Passwords are case sensitive.
 
@@ -181,7 +181,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 5. In the *Host name* box, type `cowboy.hpc.okstate.edu`.
 6. In the *User name* box, enter your username.
 
-> If you want to save the above information, click *Save*. In the future, you can double-click the session name directly to log in.
+> If you want to save the above information, click *Save*. In the future, you can double-click the session name to directly log in.
 
 7. Click *Login*.
 8. You will see a window similar to the one below once you have connected.
@@ -267,11 +267,11 @@ The most effective way to use Cowboy is as follows:
 1. Log in.
 2. Save information about your job in a submission script.
 3. Submit your submission script to the scheduler.
-4. out and wait for your job to finish.
+4. Log out and wait for your job to finish.
 
-> You can set up your submission script so that the scheduler sends you an email once your job is [finished](#nano).
+> You can set up your submission script so the scheduler sends you an email once your job has [finished](#nano).
 
-The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference this guides's list of [Linux commands](#linux-commands).
+The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference this tutorial's list of [Linux commands](#linux-commands).
 
 # Submission Scripts
 Submission scripts give information about your job to the scheduler. Remember to use your username in place of `pete` in the following examples.
@@ -312,19 +312,19 @@ module load examples
 helloworld
 ```
 
-Lines begining with `#` are comments. They serve as your notes, but are ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. See the table below for more information.
+Lines begining with `#` are comments. They serve as your notes, but are ignored the computer. Any line that starts with `#PBS` is a special comment that gives information to the scheduler.
 
-### Submit Script Commands
+### Submission Script Commands
 
-| Line                    | Meaning                                                                                                                      |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `#PBS -q express`       | Determines what queue your job will wait in before it begins.                                                                |
-| `#PBS -l nodes=1:ppn=1` | Determine how many nodes, and processors per node (ppn), your job will need.                                                 |
-| `#PBS -l wlltime=10:00` | Determines your job's time limit.                                                                                            |
-| `#PBS -j oe`            | Please make sure all your submission scripts include this line. It will help HPCC staff assist you if your job has an error. |
-| `cd $PBS_O_WORKDIR`     | Tells the system where your job is located. Please make sure all your submission scripts include this line.                  |
-| `module load`           | Loads any needed software to run your job.                                                                                   |
-| `helloworld`            | The command to start your job. This command will change depending on your job.                                               |
+| Line                     | Meaning                                                                                                                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `#PBS -q express`        | Determines what queue your job will wait in before it begins.                                                                |
+| `#PBS -l nodes=1:ppn=1`  | Determine how many nodes, and processors per node (ppn), your job will need.                                                 |
+| `#PBS -l walltime=10:00` | Determines your job's time limit.                                                                                            |
+| `#PBS -j oe`             | Please make sure all your submission scripts include this line. It will help HPCC staff assist you if your job has an error. |
+| `cd $PBS_O_WORKDIR`      | Tells the system where your job is located. Please make sure all your submission scripts include this line.                  |
+| `module load`            | Loads any needed software to run your job.                                                                                   |
+| `helloworld`             | The command to start your job. This command will change depending on your job.                                               |
 
 > Please try to accurately predict how long your job will take. If the wall time is too long, it may delay your job's start time. If your job is taking longer than you expected, please email [HPCC staff](mailto:hpcc@okstate.edu) to request a wall time extension.
 
@@ -406,7 +406,7 @@ helloworld
 ```
 
 11. Using the arrow keys, move the cursor to the end of the line `cd $PBS_O_WORKDIR`.
-12. Press `Enter` to add a blank line and type: `#PBS -m abe -M youremail@university.edu`.
+12. Press `Enter` to add a blank line and type: `#PBS -m abe -M your.email@university.edu`.
 13. Hold down `Ctrl`+`x` to exit `nano`.
 
 ```bash
@@ -436,7 +436,7 @@ Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's
 | Queue    | Wall Time Limit       | Description                                                                  |
 | -------- | --------------------- | ---------------------------------------------------------------------------- |
 | batch    | 120 hours (120:00:00) | The default queue.                                                           |
-| express  | 1 hour (1:00:00)      | For running short jobs and testing scripts. Only contains two compute nodes. |
+| express  | 1 hour (1:00:00)      | For running short jobs and testing scripts. Has only two compute nodes.      |
 | bigmem   | 120 hours (120:00:00) | Jobs run on one of two compute nodes that have 256GB of RAM and a GPU card.  |
 | killable | 504 hours (504:00:00) | For long jobs. HPCC administrators may stop jobs in this queue at any time.  |
 
