@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 /* Give links an "OSU" look */
 a {
 	text-decoration: none;
@@ -26,7 +29,6 @@ body {
 }
 
 /* Navigation sidebar */
-
 .sidenav {
 	height: 100%;
 	width: 200px;
@@ -37,6 +39,7 @@ body {
 	background-color: #FF7300;
 	background-image: linear-gradient(to right, #ff7300, white 98%);
 	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
 }
 
 .sidenav a {
@@ -59,8 +62,6 @@ body {
 }
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 body,h1,h2,h3,h4,h5 {
 	font-family: "Poppins", sans-serif;
 }
