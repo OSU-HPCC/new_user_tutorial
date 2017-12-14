@@ -241,7 +241,7 @@ For more information, visit the [Globus website](https://www.globus.org/ "Globus
 2. Navigate to the directory where you want to place the file.
 3. Type `scp yourusername@cowboy.hpc.okstate.edu:directory_where_your_file_is_stored/yourfilename .`.
 
-> If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#linux-commands) for the current working directory.
+> If Pete wanted to move the file `examplefile.txt` from his scratch folder to his local computer, he would type `scp pete@cowboy.hpc.okstate.edu:/scratch/pete/data/examplefile.txt .`. The `.` is [shorthand](#terminal-shorthand) for the current working directory.
 
 4. Enter your Cowboy password.
 5. You will see the file name and "100%" once the transfer completes.
@@ -269,7 +269,7 @@ The most effective way to use Cowboy is as follows:
 3. Submit your submission script to the scheduler.
 4. Log out and wait for your job to finish.
 
-> You can set up your submission script so the scheduler sends you an email once your job has [finished](#nano).
+> You can set up your submission script so the scheduler [sends you an email](#nano) once your job has finished.
 
 The following sections contain a guided exercise. This exercise will show you how to do each of these steps. You may find it useful to reference this tutorial's list of [Linux commands](#linux-commands).
 
