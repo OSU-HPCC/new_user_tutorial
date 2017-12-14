@@ -37,15 +37,15 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #FF7300;
-	background-image: linear-gradient(to right, #ff7300, white 98%);
+	background-color: black;
+	background-image: linear-gradient(to right, black 91%, white 98%);
 	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 }
 
 .sidenav a {
-	color: black;
+	color: white;
 	padding: 2px;
 	text-decoration: none;
 	display: block;
@@ -53,8 +53,12 @@ body {
 }
 
 .sidenav a:hover {
-	background-color: white;
+	background-color: #FF7300;
 	color: black;
+}
+
+.sidenav h1 {
+	color: white;
 }
 
 .content {
