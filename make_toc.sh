@@ -14,7 +14,7 @@ HEADERS=$(mktemp)
 # the tutorial with lines that start similarly
 # I filtered out all the bash code lines, leaving
 # only seciton headers
-cat "$1" | sed 's/#!//g' | sed 's/#PBS//g' | sed 's/#\ \ //g' | grep "^#\ " > $HEADERS 
+cat "$1" |sed 's/#\ New\ User\ Tutorial//g' | sed 's/#!//g' | sed 's/#PBS//g' | sed 's/#\ \ //g' | grep "^#\ " > $HEADERS 
 
 # Remove heading markers for easier processing
 sed -i 's/^#*\ //g' $HEADERS 
