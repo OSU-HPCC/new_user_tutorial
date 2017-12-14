@@ -100,7 +100,7 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `tar`     | Tar                     | Creates file archives.                                                                                                    |
 | `man`     | Manual                  | Allows users to look up manual entries.                                                                                   |
 | `exit`    | Exit                    | Ends the session.                                                                                                         |
-| `\|`      | Pipe                    | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
+| `|`      | Pipe                    | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
 
 | Shorthand | Terminal's Interpretation                    |
 | --------- | -------------------------------------------- |
