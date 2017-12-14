@@ -55,12 +55,16 @@ Macintosh operating systems already have a terminal application.
 ### Using your mouse
 Your mouse has no function within the terminal. Apart from copy and paste commands, you can only use your keyboard.
 
+### Copy
+
 | **System**             | **Action**                                                                        |
 | ---------------------- | --------------------------------------------------------------------------------- |
 | Putty                  | Highlighting with a mouse is equivalent to copy.                                  |
 | Mac Terminal           | Highlighting with a mouse while holding down `Command`+`c` is equivalent to copy. |
 | Linux's xterm          | Highlighting with a mouse is equivalent to copy.                                  |
 | Linux's GNOME Terminal | The key combination `Ctrl`+`Shift`+`c` is equivalent to copy.                     |
+
+### Paste
 
 | **System**             | **Action**                                         |
 | ---------------------- | ----------                                         |
@@ -86,6 +90,8 @@ It is important to change your password when you log in the first time. Change y
 # Linux Commands
 Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 
+### Commands
+
 | Command   | Name                    | Purpose                                                                                                                   |
 | --------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `pwd`     | Print Working Directory | Displays your current location.                                                                                           |
@@ -102,11 +108,15 @@ Below are Linux commands and terminal shortcuts that are useful on Cowboy.
 | `exit`    | Exit                    | Ends the session.                                                                                                         |
 | `|`      | Pipe                    | The pipe character is placed between two commands. It "pipes" the first command's output into the second command's input. |
 
+### Terminal Shorthand
+
 | Shorthand | Terminal's Interpretation                    |
 | --------- | -------------------------------------------- |
 | `..`      | One directory up from the current directory. |
 | `.`       | The current directory.                       |
 | `~`       | The user's home directory.                   |
+
+### Key Combinations
 
 | Key Combination | Action                                            |
 | --------------- | ------------------------------------------------- |
@@ -296,6 +306,8 @@ helloworld
 
 Lines begining with `#` are comments. They serve as your notes, but are ignored by Linux. Any line that starts with `#PBS` is a special comment that gives information to the scheduler. See the table below for more information.
 
+### Submit Script Commands
+
 | Line                    | Meaning                                                                                                                      |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `#PBS -q express`       | Determines what queue your job will wait in before it begins.                                                                |
@@ -410,6 +422,8 @@ This section explains more about job queues and "processors per node."
 
 ## Job Queues
 Job queues are where jobs wait to begin. Edit your script to use one of Cowboy's four job queues.
+
+### Job Queues
 
 | Queue    | Wall Time Limit       | Description                                                                  |
 | -------- | --------------------- | ---------------------------------------------------------------------------- |
