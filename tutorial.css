@@ -158,3 +158,16 @@ blockquote > :first-child {
 blockquote > :last-child {
 	margin-bottom: 0;
 }
+
+/* Title Page */
+.splashpage h1 {
+	text-align: center;
+	font-size: 600%;
+}
+
+.splashpage img {
+	display: block;
+	margin: auto;
+	width: 90%;
+	border-radius: 8px;
+}
